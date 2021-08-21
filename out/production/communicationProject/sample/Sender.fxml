@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@Design.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.senderController">
+    <Label text="Sender" textFill="#2196f3">
+        <font>
+            <Font size="20.0" />
+        </font>
+        <VBox.margin>
+            <Insets left="20.0" />
+        </VBox.margin>
+    </Label>
+    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets right="15.0" top="15.0" />
+        </VBox.margin>
+        <padding>
+            <Insets left="15.0" />
+        </padding>
+        <TextField fx:id="senderMessage" alignment="CENTER" onAction="#hammingButtonAction" promptText="Type message data you want to send" styleClass="tf_box" HBox.hgrow="ALWAYS">
+            <font>
+                <Font size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+        </TextField>
+    </HBox>
+    <Button fx:id="hammingButton" mnemonicParsing="false" onAction="#hammingButtonAction" prefHeight="38.0" prefWidth="462.0" styleClass="blue-btn" text="Hamming Code" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+        </VBox.margin>
+        <font>
+            <Font size="16.0" />
+        </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+   <Label fx:id="hammingCodeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="445.0" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <VBox.margin>
+         <Insets left="15.0" top="40.0" />
+      </VBox.margin>
+   </Label>
+   <Button fx:id="copyWithoutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="blue-btn" text="Copy Without Error" visible="false">
+      <VBox.margin>
+         <Insets left="170.0" top="30.0" />
+      </VBox.margin>
+      <font>
+         <Font size="15.0" />
+      </font>
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="copyWithErrorButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="blue-btn" text="Copy With Error" visible="false">
+      <font>
+         <Font size="15.0" />
+      </font>
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <VBox.margin>
+         <Insets left="170.0" top="10.0" />
+      </VBox.margin>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+</VBox>
